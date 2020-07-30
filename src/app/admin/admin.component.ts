@@ -19,15 +19,7 @@ export class AdminComponent implements OnInit {
 loginAdmin(){
   // console.log(this.adminData)
   this._authService.loginAdmin(this.adminData)
-  // .subscribe(
-  //   res => {
-  //     console.log(res)
-  //     localStorage.setItem('token',res.token)
-  //     this.router.navigate(['products'])
-  //   },
-  //   err => console.log(err)
-  // )
-}
+  }
 }
 
 

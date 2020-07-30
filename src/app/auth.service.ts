@@ -12,7 +12,6 @@ export class AuthService {
   private _registerUrl = "http://localhost:3000/api/register"
   private _loginUrl = "http://localhost:3000/api/login" 
   private _adminUrl = "http://localhost:3000/api/admin" 
-  // private _applyUrl = "http://localhost:3000/api/apply";
 
   constructor(private http: HttpClient, private _router: Router) { }
 
@@ -62,8 +61,5 @@ export class AuthService {
   getToken(){
     return localStorage.getItem('token');
   }
-  // applyUser(user){
-  //   return this.http.post<any>(this._applyUrl,user)
-  // }
 
 }

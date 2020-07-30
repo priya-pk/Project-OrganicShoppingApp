@@ -20,12 +20,7 @@ export class FormComponent implements OnInit {
 
   details(){
     this._router.navigate(['message'])
-    this.alert=true;
   }
   
-
-  // closeAlert(){
-  //   this.alert=false;
-  // }
 
 }
