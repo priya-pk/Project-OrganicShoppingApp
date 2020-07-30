@@ -1,0 +1,120 @@
+<!-- <div *ngIf="alert" class="alert alert-success alert-dismissible fade show mt-5" role="alert">
+    <strong>Thank You</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div> -->
+<div class="container-fluid">
+    <!-- <div class="row pt-5">
+        <div class="col-md-6">
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <h3 class=" head">Details</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form" #userLogin="ngForm" (ngSubmit)="details()">
+                        <div class="form-group">
+                            <label for="">Fullname</label>
+                            <input [(ngModel)]="UserData.fullname"
+                                [class.is-invalid]="fullname.invalid && fullname.touched" name="fullname" type="text"
+                                class="form-control rounded-0" #fullname="ngModel" required>
+                            <small class="text-danger" [class.d-none]="fullname.valid || fullname.touched">Invalid
+                                Input</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input [(ngModel)]="UserData.email" [class.is-invalid]="email.invalid && email.touched"
+                                name="email" type="text" class="form-control rounded-0"
+                                pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #email="ngModel" required>
+                            <small class="text-danger" [class.d-none]="email.valid || email.touched">Invalid
+                                email</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" class="form-control" [(ngModel)]="UserData.email"
+                                [class.is-invalid]="password.invalid && password.touched" minlength="6"
+                                #password="ngModel" name="password" required>
+                            <small class="text-danger" [class.d-none]="password.valid || password.touched">Invalid
+                                password</small>
+                        </div>
+                        <button type="submit" [disabled]="userLogin.form.invalid" (click)="closeAlert()"
+                            class="btn btn-primary float-right">Submit Details</button>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+
+
+    <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+            <div class="card-header">
+                <h3 class=" head">Cash on Delivery</h3>
+            </div>
+            <div class="card-body">
+                <form class="form" #userLogin="ngForm" (ngSubmit)="details()">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" id="fName" [(ngModel)]="UserData.fname" [class.is-invalid]="fname.invalid && fname.touched" name="fname"  #fname="ngModel"
+                                placeholder="First Name" required>
+                            <small class="text-danger" [class.d-none]="fname.valid || fname.touched">Invalid Input</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lname">Last Name</label>
+                            <input type="text" class="form-control" id="lName" [(ngModel)]="UserData.lname" [class.is-invalid]="lname.invalid && lname.touched" name="lname"  #lname="ngModel"
+                            placeholder="Last Name" required>
+                            <small class="text-danger" [class.d-none]="lname.valid || lname.touched">Invalid Input</small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="ph">Phone Number</label>
+                            <input type="text" class="form-control" id="ph" placeholder="Phone Number" [(ngModel)]="UserData.ph" [class.is-invalid]="ph.invalid && ph.touched" name="ph" pattern=""  #ph="ngModel" required>
+                            <small class="text-danger" [class.d-none]="ph.valid || ph.touched">Invalid Phone Number</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="address1" placeholder="Address1" [(ngModel)]="UserData.address1" [class.is-invalid]="address1.invalid && address1.touched" name="address1" #address1="ngModel" required>
+                        <small class="text-danger" [class.d-none]="address1.valid || address1.touched">Invalid Address</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Address 2</label>
+                        <input type="text" class="form-control" id="address2" placeholder="Address2" [(ngModel)]="UserData.address2" [class.is-invalid]="address2.invalid && address2.touched" name="address2" #address2="ngModel" required>
+                        <small class="text-danger" [class.d-none]="address2.valid || address2.touched">Invalid Address</small>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">City</label>
+                            <input type="text" class="form-control" id="city" [(ngModel)]="UserData.city" [class.is-invalid]="city.invalid && city.touched" name="city" #city="ngModel" required>
+                            <small class="text-danger" [class.d-none]="city.valid || city.touched">Invalid City</small>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="inputState">State</label>
+                            <input type="text" class="form-control" id="state" [(ngModel)]="UserData.state" [class.is-invalid]="state.invalid && state.touched" name="state" #state="ngModel" required>
+                            <small class="text-danger" [class.d-none]="state.valid || state.touched">Invalid State</small>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputZip">Zip</label>
+                            <input type="text" class="form-control" id="inputZip" [(ngModel)]="UserData.zip" [class.is-invalid]="zip.invalid && zip.touched" name="zip" #zip="ngModel" required>
+                            <small class="text-danger" [class.d-none]="zip.valid || zip.touched">Invalid Zip</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                            <label class="form-check-label" for="gridCheck">
+                                Check me out
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" [disabled]="userLogin.form.invalid" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

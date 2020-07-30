@@ -1,0 +1,24 @@
+<div class="container-fluid singleItem">
+    <h2 class="side-head">Product Details</h2>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card" style="width: 300px; height: 200px;">
+                <img class="card-img-top" [src]="productItem.imageUrl" alt="Card image cap" style="width: 300px; height: 200px;">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="card-title">{{productItem.productName}}</h2>
+            <p class="card-text">{{productItem.category}}</p>
+            <p class="card-text"><strong>Description : </strong>{{productItem.description}}</p>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            <p class="card-text"><strong>Price : </strong>{{productItem.price}}</p>
+            <p class="card-text"><strong>Quantity : </strong>{{productItem.quantity}}</p>
+            <!-- <a [routerLink]="['cart',{id:product.id}]" (click)='buy' class="btn btn-sm btn-success" >Buy</a>  -->
+            <button type="button" (click)='buy()' class="btn btn-sm btn-success" >Buy</button>
+            <button type="button" class="btn btn-sm btn-outline-success " (click)='back()'>Go Back</button>
+        </div>
+    </div>
+</div>

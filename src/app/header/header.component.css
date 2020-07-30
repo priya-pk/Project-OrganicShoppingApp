@@ -1,0 +1,24 @@
+.navbar{
+    /* background-color:#2f8d03; */
+   
+    /* background-color:	rgb(2, 80, 2); */
+    /* background-color:	darkgreen; */
+    background-color:rgb(1, 65, 1);
+    /* background-image: url(/assets/footer.jpg); */
+}
+.nav-link{
+    color:  white!important;
+    font-size: medium;
+    font-size: 18px;
+}
+a:hover{
+    color:  rgba(0, 255, 0, 0.788)!important;
+}
+.navbar-brand{
+    color:  white!important;
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 8px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 5px;
+}

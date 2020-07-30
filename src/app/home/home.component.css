@@ -1,0 +1,9 @@
+.head{
+    cursor: pointer;
+}
+.logo{
+    font-family: 'Dancing Script', cursive;
+    color: olivedrab;
+    font-size: 40px;
+    word-spacing: 3px;
+}

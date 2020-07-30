@@ -1,0 +1,16 @@
+ul{
+    list-style-type:none;
+}
+footer{
+    color: white;
+    position: relative;
+    bottom: 0;
+    background-image: url(/assets/footer.jpg);
+
+}
+span{
+    margin-right: 10px;
+}
+.foot-head{
+    font-weight: 700;
+}
