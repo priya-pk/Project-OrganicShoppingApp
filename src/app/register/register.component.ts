@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
       res => {
       console.log(res)
       localStorage.setItem('token',res.token)
-      this.router.navigate(['cart'])
+      this.router.navigate(['products'])
     },
       err => console.log(err)
     )

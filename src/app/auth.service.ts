@@ -9,18 +9,16 @@ import { Subject } from "rxjs";
 export class AuthService {
   private isAdmin = false;
   private adminStatusListener = new Subject<boolean>();
-  private _registerUrl = "http://localhost:3000/api/register"
-  private _loginUrl = "http://localhost:3000/api/login" 
-  private _adminUrl = "http://localhost:3000/api/admin" 
+  private _registerUrl = "http://localhost:3000/api/register";
+  private _loginUrl = "http://localhost:3000/api/login";
+  private _adminUrl = "http://localhost:3000/api/admin";
 
   constructor(private http: HttpClient, private _router: Router) { }
 
   registerUser(user) {
     return this.http.post<any>(this._registerUrl,user)
   }
-  loginUser(user){
-    return this.http.post<any>(this._loginUrl,user)
-  }
+
   loginAdmin(admin){
     this.http.post<any>(this._adminUrl,admin)
     .subscribe(
@@ -35,10 +33,6 @@ export class AuthService {
       err => console.log(err)
     )
   }
-  loggedIn() {
-    return !!localStorage.getItem('token')
-  }
-  
   getIsAdmin() {
     return this.isAdmin;
   }
@@ -48,6 +42,12 @@ export class AuthService {
   }
 
   adminloggedIn() {
+    return !!localStorage.getItem('token')
+  }
+  loginUser(user){
+    return this.http.post<any>(this._loginUrl,user)
+  }
+  loggedIn() {
     return !!localStorage.getItem('token')
   }
   logoutUser(){

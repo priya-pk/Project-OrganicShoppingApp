@@ -5,7 +5,6 @@ const User = require('../models/user');
 const Product = require('../models/product');
 const Farmer = require('../models/farmer');
 const mongoose = require('mongoose');
-const user = require('../models/user');
 const db = "mongodb+srv://user_priya:prjz9496@mycluster.udzj7.azure.mongodb.net/ShoppingDb?retryWrites=true&w=majority"
 
 mongoose.connect(db,err=>{
@@ -40,10 +39,6 @@ router.get('/',(req,res)=>{
 router.post('/register',(req,res)=>{
     let userData = req.body
     let user = new User(userData)
-    if(req.body.adminCode==='admin123'){
-        user.isAdmin=true;
-        console.log("admin")
-    }
     user.save((err,registeredUser)=>{
         if(err){
             console.log(err)
@@ -139,19 +134,7 @@ router.get('/read/:id',(req,res)=>{
         console.log(product);
         res.send(product);
     })
- })//edit
-// router.get('/read/:id',(req,res)=>{
-//     res.header('Access-Control-Allow-Origin', '*')
-//     res.header('Access-Control-Allow-Methods :GET,POST,PATCH,PUT,DELETE,OPTIONS')
-//     const id = req.params.id;
-//     Product.findOne({_id:id})
-//     .then((product)=>{
-//         console.log(product);
-//         res.send(product);
-//     })
-// })
-
-
+ })
 
 router.put('/update/:id', (req, res) => {
     res.header('Access-Control-Allow-Origin', '*')
